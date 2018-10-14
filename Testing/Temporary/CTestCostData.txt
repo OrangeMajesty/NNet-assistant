@@ -1,0 +1,4 @@
+AutoUnitTests 1 0
+unitTest 0 0
+---
+AutoUnitTests

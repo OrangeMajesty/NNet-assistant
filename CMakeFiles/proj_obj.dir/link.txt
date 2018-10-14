@@ -1,0 +1,1 @@
+/usr/bin/g++  -fPIC -O3 -DNDEBUG  -shared -Wl,-soname,libproj_obj.so -o build/libproj_obj.so CMakeFiles/proj_obj.dir/src/tig.cpp.o 
