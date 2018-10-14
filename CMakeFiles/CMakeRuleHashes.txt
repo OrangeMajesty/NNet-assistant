@@ -1,3 +1,0 @@
-# Hashes of file build rules.
-a3b7067df30c7a7ccea39df5758d9111 AutoUnitTests.cpp
-d06875c8cf747e21ebe1688e39b0d1d5 CMakeFiles/test_output

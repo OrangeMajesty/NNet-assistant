@@ -1,7 +1,0 @@
-/home/dmitry-us/Project/NNet-assistant/CMakeFiles/rebuild_cache.dir
-/home/dmitry-us/Project/NNet-assistant/CMakeFiles/edit_cache.dir
-/home/dmitry-us/Project/NNet-assistant/CMakeFiles/test.dir
-/home/dmitry-us/Project/NNet-assistant/CMakeFiles/AutoUnitTests.dir
-/home/dmitry-us/Project/NNet-assistant/CMakeFiles/proj_obj.dir
-/home/dmitry-us/Project/NNet-assistant/CMakeFiles/test_output.dir
-/home/dmitry-us/Project/NNet-assistant/CMakeFiles/main.dir

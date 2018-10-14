@@ -1,1 +1,0 @@
-/usr/bin/g++   -O3 -DNDEBUG   CMakeFiles/AutoUnitTests.dir/AutoUnitTests.cpp.o  -o AutoUnitTests -Wl,-rpath,/home/dmitry-us/Project/NNet-assistant/build -rdynamic build/libproj_obj.so 
