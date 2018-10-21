@@ -523,8 +523,19 @@
 			"file": "CMakeLists.txt",
 			"settings":
 			{
-				"buffer_size": 1004,
+				"buffer_size": 1012,
 				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "# Prerequisites\n*.d\n\n# Compiled Object files\n*.slo\n*.lo\n*.o\n*.obj\n\n# Precompiled Headers\n*.gch\n*.pch\n\n# Compiled Dynamic libraries\n*.so\n*.dylib\n*.dll\n\n# Fortran module files\n*.mod\n*.smod\n\n# Compiled Static libraries\n*.lai\n*.la\n*.a\n*.lib\n\n# Executables\n*.exe\n*.out\n*.app\n\n# Other\nCMakeFiles/*\n*.cmake\n",
+			"file": ".gitignore",
+			"file_size": 305,
+			"file_write_time": 131840163482449694,
+			"settings":
+			{
+				"buffer_size": 300,
 				"line_ending": "Unix"
 			}
 		}
@@ -939,7 +950,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 1,
 			"sheets":
 			[
 				{
@@ -948,15 +959,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1004,
+						"buffer_size": 1012,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								545,
-								545
+								229,
+								229
 							]
 						],
 						"settings":
@@ -970,7 +981,35 @@
 							"syntax": "Packages/CMake/CMake.sublime-syntax"
 						},
 						"translation.x": 0.0,
-						"translation.y": 225.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": ".gitignore",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 300,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								176,
+								179
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/zzz A File Icon zzz/aliases/Shell Script (Git).sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 9.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,

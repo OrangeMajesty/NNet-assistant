@@ -122,30 +122,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named AutoUnitTests
+# Target rules for targets named AutoUnitTests.out
 
 # Build rule for target.
-AutoUnitTests: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 AutoUnitTests
-.PHONY : AutoUnitTests
+AutoUnitTests.out: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 AutoUnitTests.out
+.PHONY : AutoUnitTests.out
 
 # fast build rule for target.
-AutoUnitTests/fast:
-	$(MAKE) -f CMakeFiles/AutoUnitTests.dir/build.make CMakeFiles/AutoUnitTests.dir/build
-.PHONY : AutoUnitTests/fast
-
-#=============================================================================
-# Target rules for targets named proj_obj
-
-# Build rule for target.
-proj_obj: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 proj_obj
-.PHONY : proj_obj
-
-# fast build rule for target.
-proj_obj/fast:
-	$(MAKE) -f CMakeFiles/proj_obj.dir/build.make CMakeFiles/proj_obj.dir/build
-.PHONY : proj_obj/fast
+AutoUnitTests.out/fast:
+	$(MAKE) -f CMakeFiles/AutoUnitTests.out.dir/build.make CMakeFiles/AutoUnitTests.out.dir/build
+.PHONY : AutoUnitTests.out/fast
 
 #=============================================================================
 # Target rules for targets named test_output
@@ -161,17 +148,30 @@ test_output/fast:
 .PHONY : test_output/fast
 
 #=============================================================================
-# Target rules for targets named main
+# Target rules for targets named proj_obj
 
 # Build rule for target.
-main: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 main
-.PHONY : main
+proj_obj: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 proj_obj
+.PHONY : proj_obj
 
 # fast build rule for target.
-main/fast:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
-.PHONY : main/fast
+proj_obj/fast:
+	$(MAKE) -f CMakeFiles/proj_obj.dir/build.make CMakeFiles/proj_obj.dir/build
+.PHONY : proj_obj/fast
+
+#=============================================================================
+# Target rules for targets named main.out
+
+# Build rule for target.
+main.out: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 main.out
+.PHONY : main.out
+
+# fast build rule for target.
+main.out/fast:
+	$(MAKE) -f CMakeFiles/main.out.dir/build.make CMakeFiles/main.out.dir/build
+.PHONY : main.out/fast
 
 AutoUnitTests.o: AutoUnitTests.cpp.o
 
@@ -179,7 +179,7 @@ AutoUnitTests.o: AutoUnitTests.cpp.o
 
 # target to build an object file
 AutoUnitTests.cpp.o:
-	$(MAKE) -f CMakeFiles/AutoUnitTests.dir/build.make CMakeFiles/AutoUnitTests.dir/AutoUnitTests.cpp.o
+	$(MAKE) -f CMakeFiles/AutoUnitTests.out.dir/build.make CMakeFiles/AutoUnitTests.out.dir/AutoUnitTests.cpp.o
 .PHONY : AutoUnitTests.cpp.o
 
 AutoUnitTests.i: AutoUnitTests.cpp.i
@@ -188,7 +188,7 @@ AutoUnitTests.i: AutoUnitTests.cpp.i
 
 # target to preprocess a source file
 AutoUnitTests.cpp.i:
-	$(MAKE) -f CMakeFiles/AutoUnitTests.dir/build.make CMakeFiles/AutoUnitTests.dir/AutoUnitTests.cpp.i
+	$(MAKE) -f CMakeFiles/AutoUnitTests.out.dir/build.make CMakeFiles/AutoUnitTests.out.dir/AutoUnitTests.cpp.i
 .PHONY : AutoUnitTests.cpp.i
 
 AutoUnitTests.s: AutoUnitTests.cpp.s
@@ -197,38 +197,68 @@ AutoUnitTests.s: AutoUnitTests.cpp.s
 
 # target to generate assembly for a file
 AutoUnitTests.cpp.s:
-	$(MAKE) -f CMakeFiles/AutoUnitTests.dir/build.make CMakeFiles/AutoUnitTests.dir/AutoUnitTests.cpp.s
+	$(MAKE) -f CMakeFiles/AutoUnitTests.out.dir/build.make CMakeFiles/AutoUnitTests.out.dir/AutoUnitTests.cpp.s
 .PHONY : AutoUnitTests.cpp.s
 
-src/tig.o: src/tig.cpp.o
+src/layer.o: src/layer.cpp.o
 
-.PHONY : src/tig.o
+.PHONY : src/layer.o
 
 # target to build an object file
-src/tig.cpp.o:
-	$(MAKE) -f CMakeFiles/proj_obj.dir/build.make CMakeFiles/proj_obj.dir/src/tig.cpp.o
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/tig.cpp.o
-.PHONY : src/tig.cpp.o
+src/layer.cpp.o:
+	$(MAKE) -f CMakeFiles/proj_obj.dir/build.make CMakeFiles/proj_obj.dir/src/layer.cpp.o
+	$(MAKE) -f CMakeFiles/main.out.dir/build.make CMakeFiles/main.out.dir/src/layer.cpp.o
+.PHONY : src/layer.cpp.o
 
-src/tig.i: src/tig.cpp.i
+src/layer.i: src/layer.cpp.i
 
-.PHONY : src/tig.i
+.PHONY : src/layer.i
 
 # target to preprocess a source file
-src/tig.cpp.i:
-	$(MAKE) -f CMakeFiles/proj_obj.dir/build.make CMakeFiles/proj_obj.dir/src/tig.cpp.i
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/tig.cpp.i
-.PHONY : src/tig.cpp.i
+src/layer.cpp.i:
+	$(MAKE) -f CMakeFiles/proj_obj.dir/build.make CMakeFiles/proj_obj.dir/src/layer.cpp.i
+	$(MAKE) -f CMakeFiles/main.out.dir/build.make CMakeFiles/main.out.dir/src/layer.cpp.i
+.PHONY : src/layer.cpp.i
 
-src/tig.s: src/tig.cpp.s
+src/layer.s: src/layer.cpp.s
 
-.PHONY : src/tig.s
+.PHONY : src/layer.s
 
 # target to generate assembly for a file
-src/tig.cpp.s:
-	$(MAKE) -f CMakeFiles/proj_obj.dir/build.make CMakeFiles/proj_obj.dir/src/tig.cpp.s
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/tig.cpp.s
-.PHONY : src/tig.cpp.s
+src/layer.cpp.s:
+	$(MAKE) -f CMakeFiles/proj_obj.dir/build.make CMakeFiles/proj_obj.dir/src/layer.cpp.s
+	$(MAKE) -f CMakeFiles/main.out.dir/build.make CMakeFiles/main.out.dir/src/layer.cpp.s
+.PHONY : src/layer.cpp.s
+
+src/neuron.o: src/neuron.cpp.o
+
+.PHONY : src/neuron.o
+
+# target to build an object file
+src/neuron.cpp.o:
+	$(MAKE) -f CMakeFiles/proj_obj.dir/build.make CMakeFiles/proj_obj.dir/src/neuron.cpp.o
+	$(MAKE) -f CMakeFiles/main.out.dir/build.make CMakeFiles/main.out.dir/src/neuron.cpp.o
+.PHONY : src/neuron.cpp.o
+
+src/neuron.i: src/neuron.cpp.i
+
+.PHONY : src/neuron.i
+
+# target to preprocess a source file
+src/neuron.cpp.i:
+	$(MAKE) -f CMakeFiles/proj_obj.dir/build.make CMakeFiles/proj_obj.dir/src/neuron.cpp.i
+	$(MAKE) -f CMakeFiles/main.out.dir/build.make CMakeFiles/main.out.dir/src/neuron.cpp.i
+.PHONY : src/neuron.cpp.i
+
+src/neuron.s: src/neuron.cpp.s
+
+.PHONY : src/neuron.s
+
+# target to generate assembly for a file
+src/neuron.cpp.s:
+	$(MAKE) -f CMakeFiles/proj_obj.dir/build.make CMakeFiles/proj_obj.dir/src/neuron.cpp.s
+	$(MAKE) -f CMakeFiles/main.out.dir/build.make CMakeFiles/main.out.dir/src/neuron.cpp.s
+.PHONY : src/neuron.cpp.s
 
 # Help Target
 help:
@@ -239,16 +269,19 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... test"
-	@echo "... AutoUnitTests"
-	@echo "... proj_obj"
+	@echo "... AutoUnitTests.out"
 	@echo "... test_output"
-	@echo "... main"
+	@echo "... proj_obj"
+	@echo "... main.out"
 	@echo "... AutoUnitTests.o"
 	@echo "... AutoUnitTests.i"
 	@echo "... AutoUnitTests.s"
-	@echo "... src/tig.o"
-	@echo "... src/tig.i"
-	@echo "... src/tig.s"
+	@echo "... src/layer.o"
+	@echo "... src/layer.i"
+	@echo "... src/layer.s"
+	@echo "... src/neuron.o"
+	@echo "... src/neuron.i"
+	@echo "... src/neuron.s"
 .PHONY : help
 
 

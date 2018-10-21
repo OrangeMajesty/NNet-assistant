@@ -1,25 +1,19 @@
-Start testing: Oct 14 23:38 +05
+Start testing: Oct 21 22:59 +05
 ----------------------------------------------------------
-1/1 Testing: AutoUnitTests
-1/1 Test: AutoUnitTests
-Command: "/home/dmitry-us/Project/NNet-assistant/AutoUnitTests"
+1/1 Testing: AutoUnitTests.out
+1/1 Test: AutoUnitTests.out
+Command: "/home/dmitry-us/Project/NNet-assistant/AutoUnitTests.out"
 Directory: /home/dmitry-us/Project/NNet-assistant
-"AutoUnitTests" start time: Oct 14 23:38 +05
+"AutoUnitTests.out" start time: Oct 21 22:59 +05
 Output:
 ----------------------------------------------------------
-Running cxxtest tests (3 tests).
-In TextInterpretation::testColpiller1:
-/home/dmitry-us/Project/NNet-assistant/test/tig_test.h:21: Error: Expected (1+1 == 3), found (2 != 3)
-In TextInterpretation::testColpiller2:
-/home/dmitry-us/Project/NNet-assistant/test/tig_test.h:27: Error: Expected (1+1 == 3), found (2 != 3)
-Failed 2 and Skipped 0 of 3 tests
-Success rate: 33%
+Running cxxtest tests (5 tests).....OK!
 <end of output>
 Test time =   0.00 sec
 ----------------------------------------------------------
-Test Failed.
-"AutoUnitTests" end time: Oct 14 23:38 +05
-"AutoUnitTests" time elapsed: 00:00:00
+Test Passed.
+"AutoUnitTests.out" end time: Oct 21 22:59 +05
+"AutoUnitTests.out" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-End testing: Oct 14 23:38 +05
+End testing: Oct 21 22:59 +05
