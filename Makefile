@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/dmitry-us/Project/NNet-assistant
+CMAKE_SOURCE_DIR = /home/xb5/Project/NNet-assistant
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/dmitry-us/Project/NNet-assistant
+CMAKE_BINARY_DIR = /home/xb5/Project/NNet-assistant
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -91,9 +91,9 @@ test/fast: test
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/dmitry-us/Project/NNet-assistant/CMakeFiles /home/dmitry-us/Project/NNet-assistant/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/xb5/Project/NNet-assistant/CMakeFiles /home/xb5/Project/NNet-assistant/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/dmitry-us/Project/NNet-assistant/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/xb5/Project/NNet-assistant/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -135,17 +135,30 @@ AutoUnitTests/fast:
 .PHONY : AutoUnitTests/fast
 
 #=============================================================================
-# Target rules for targets named proj_obj
+# Target rules for targets named proj_obj.o
 
 # Build rule for target.
-proj_obj: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 proj_obj
-.PHONY : proj_obj
+proj_obj.o: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 proj_obj.o
+.PHONY : proj_obj.o
 
 # fast build rule for target.
-proj_obj/fast:
-	$(MAKE) -f CMakeFiles/proj_obj.dir/build.make CMakeFiles/proj_obj.dir/build
-.PHONY : proj_obj/fast
+proj_obj.o/fast:
+	$(MAKE) -f CMakeFiles/proj_obj.o.dir/build.make CMakeFiles/proj_obj.o.dir/build
+.PHONY : proj_obj.o/fast
+
+#=============================================================================
+# Target rules for targets named main.out
+
+# Build rule for target.
+main.out: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 main.out
+.PHONY : main.out
+
+# fast build rule for target.
+main.out/fast:
+	$(MAKE) -f CMakeFiles/main.out.dir/build.make CMakeFiles/main.out.dir/build
+.PHONY : main.out/fast
 
 #=============================================================================
 # Target rules for targets named test_output
@@ -159,19 +172,6 @@ test_output: cmake_check_build_system
 test_output/fast:
 	$(MAKE) -f CMakeFiles/test_output.dir/build.make CMakeFiles/test_output.dir/build
 .PHONY : test_output/fast
-
-#=============================================================================
-# Target rules for targets named main
-
-# Build rule for target.
-main: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 main
-.PHONY : main
-
-# fast build rule for target.
-main/fast:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
-.PHONY : main/fast
 
 AutoUnitTests.o: AutoUnitTests.cpp.o
 
@@ -206,8 +206,8 @@ src/tig.o: src/tig.cpp.o
 
 # target to build an object file
 src/tig.cpp.o:
-	$(MAKE) -f CMakeFiles/proj_obj.dir/build.make CMakeFiles/proj_obj.dir/src/tig.cpp.o
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/tig.cpp.o
+	$(MAKE) -f CMakeFiles/proj_obj.o.dir/build.make CMakeFiles/proj_obj.o.dir/src/tig.cpp.o
+	$(MAKE) -f CMakeFiles/main.out.dir/build.make CMakeFiles/main.out.dir/src/tig.cpp.o
 .PHONY : src/tig.cpp.o
 
 src/tig.i: src/tig.cpp.i
@@ -216,8 +216,8 @@ src/tig.i: src/tig.cpp.i
 
 # target to preprocess a source file
 src/tig.cpp.i:
-	$(MAKE) -f CMakeFiles/proj_obj.dir/build.make CMakeFiles/proj_obj.dir/src/tig.cpp.i
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/tig.cpp.i
+	$(MAKE) -f CMakeFiles/proj_obj.o.dir/build.make CMakeFiles/proj_obj.o.dir/src/tig.cpp.i
+	$(MAKE) -f CMakeFiles/main.out.dir/build.make CMakeFiles/main.out.dir/src/tig.cpp.i
 .PHONY : src/tig.cpp.i
 
 src/tig.s: src/tig.cpp.s
@@ -226,8 +226,8 @@ src/tig.s: src/tig.cpp.s
 
 # target to generate assembly for a file
 src/tig.cpp.s:
-	$(MAKE) -f CMakeFiles/proj_obj.dir/build.make CMakeFiles/proj_obj.dir/src/tig.cpp.s
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/tig.cpp.s
+	$(MAKE) -f CMakeFiles/proj_obj.o.dir/build.make CMakeFiles/proj_obj.o.dir/src/tig.cpp.s
+	$(MAKE) -f CMakeFiles/main.out.dir/build.make CMakeFiles/main.out.dir/src/tig.cpp.s
 .PHONY : src/tig.cpp.s
 
 # Help Target
@@ -240,9 +240,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... test"
 	@echo "... AutoUnitTests"
-	@echo "... proj_obj"
+	@echo "... proj_obj.o"
+	@echo "... main.out"
 	@echo "... test_output"
-	@echo "... main"
 	@echo "... AutoUnitTests.o"
 	@echo "... AutoUnitTests.i"
 	@echo "... AutoUnitTests.s"

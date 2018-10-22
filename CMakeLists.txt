@@ -13,10 +13,10 @@ set(BUILD_PACH "build/")
 
 set(TEST_INC AutoUnitTests.cpp)
 
-set(TEST_EXEC AutoUnitTests.out)
+set(TEST_EXEC AutoUnitTests)
 set(PROG_EXEC main.out)
 
-set(PROJ_OBJ proj_obj)
+set(PROJ_OBJ proj_obj.o)
 
 set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${BUILD_PACH})
 
