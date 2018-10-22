@@ -38,44 +38,69 @@
 			"file_regex": "^(..[^:]*):([0-9]+):?([0-9]+)?:? (.*)$"
 		},
 		{
-			"name": "NNet-assistant - AutoUnitTests",
-			"cmd": ["/usr/bin/make", "-f", "Makefile", "VERBOSE=1", "AutoUnitTests"],
+			"name": "NNet-assistant - AutoUnitTests.out",
+			"cmd": ["/usr/bin/make", "-f", "Makefile", "VERBOSE=1", "AutoUnitTests.out"],
 			"working_dir": "${project_path}",
 			"file_regex": "^(..[^:]*):([0-9]+):?([0-9]+)?:? (.*)$"
 		},
 		{
-			"name": "NNet-assistant - AutoUnitTests/fast",
-			"cmd": ["/usr/bin/make", "-f", "Makefile", "VERBOSE=1", "AutoUnitTests/fast"],
+			"name": "NNet-assistant - AutoUnitTests.out/fast",
+			"cmd": ["/usr/bin/make", "-f", "Makefile", "VERBOSE=1", "AutoUnitTests.out/fast"],
 			"working_dir": "${project_path}",
 			"file_regex": "^(..[^:]*):([0-9]+):?([0-9]+)?:? (.*)$"
 		},
 		{
+<<<<<<< HEAD
 			"name": "NNet-assistant - proj_obj.o",
 			"cmd": ["/usr/bin/make", "-f", "Makefile", "VERBOSE=1", "proj_obj.o"],
-			"working_dir": "${project_path}",
-			"file_regex": "^(..[^:]*):([0-9]+):?([0-9]+)?:? (.*)$"
-		},
-		{
-			"name": "NNet-assistant - proj_obj.o/fast",
-			"cmd": ["/usr/bin/make", "-f", "Makefile", "VERBOSE=1", "proj_obj.o/fast"],
-			"working_dir": "${project_path}",
-			"file_regex": "^(..[^:]*):([0-9]+):?([0-9]+)?:? (.*)$"
-		},
-		{
-			"name": "NNet-assistant - main.out",
-			"cmd": ["/usr/bin/make", "-f", "Makefile", "VERBOSE=1", "main.out"],
-			"working_dir": "${project_path}",
-			"file_regex": "^(..[^:]*):([0-9]+):?([0-9]+)?:? (.*)$"
-		},
-		{
-			"name": "NNet-assistant - main.out/fast",
-			"cmd": ["/usr/bin/make", "-f", "Makefile", "VERBOSE=1", "main.out/fast"],
-			"working_dir": "${project_path}",
-			"file_regex": "^(..[^:]*):([0-9]+):?([0-9]+)?:? (.*)$"
-		},
-		{
+=======
 			"name": "NNet-assistant - test_output",
 			"cmd": ["/usr/bin/make", "-f", "Makefile", "VERBOSE=1", "test_output"],
+>>>>>>> 350582f62a96f19daaf187f236bb69e6c37426da
+			"working_dir": "${project_path}",
+			"file_regex": "^(..[^:]*):([0-9]+):?([0-9]+)?:? (.*)$"
+		},
+		{
+<<<<<<< HEAD
+			"name": "NNet-assistant - proj_obj.o/fast",
+			"cmd": ["/usr/bin/make", "-f", "Makefile", "VERBOSE=1", "proj_obj.o/fast"],
+=======
+			"name": "NNet-assistant - proj_obj",
+			"cmd": ["/usr/bin/make", "-f", "Makefile", "VERBOSE=1", "proj_obj"],
+>>>>>>> 350582f62a96f19daaf187f236bb69e6c37426da
+			"working_dir": "${project_path}",
+			"file_regex": "^(..[^:]*):([0-9]+):?([0-9]+)?:? (.*)$"
+		},
+		{
+<<<<<<< HEAD
+			"name": "NNet-assistant - main.out",
+			"cmd": ["/usr/bin/make", "-f", "Makefile", "VERBOSE=1", "main.out"],
+=======
+			"name": "NNet-assistant - proj_obj/fast",
+			"cmd": ["/usr/bin/make", "-f", "Makefile", "VERBOSE=1", "proj_obj/fast"],
+>>>>>>> 350582f62a96f19daaf187f236bb69e6c37426da
+			"working_dir": "${project_path}",
+			"file_regex": "^(..[^:]*):([0-9]+):?([0-9]+)?:? (.*)$"
+		},
+		{
+<<<<<<< HEAD
+			"name": "NNet-assistant - main.out/fast",
+			"cmd": ["/usr/bin/make", "-f", "Makefile", "VERBOSE=1", "main.out/fast"],
+=======
+			"name": "NNet-assistant - main.out",
+			"cmd": ["/usr/bin/make", "-f", "Makefile", "VERBOSE=1", "main.out"],
+>>>>>>> 350582f62a96f19daaf187f236bb69e6c37426da
+			"working_dir": "${project_path}",
+			"file_regex": "^(..[^:]*):([0-9]+):?([0-9]+)?:? (.*)$"
+		},
+		{
+<<<<<<< HEAD
+			"name": "NNet-assistant - test_output",
+			"cmd": ["/usr/bin/make", "-f", "Makefile", "VERBOSE=1", "test_output"],
+=======
+			"name": "NNet-assistant - main.out/fast",
+			"cmd": ["/usr/bin/make", "-f", "Makefile", "VERBOSE=1", "main.out/fast"],
+>>>>>>> 350582f62a96f19daaf187f236bb69e6c37426da
 			"working_dir": "${project_path}",
 			"file_regex": "^(..[^:]*):([0-9]+):?([0-9]+)?:? (.*)$"
 		}

@@ -520,16 +520,63 @@
 	"buffers":
 	[
 		{
+			"contents": "cmake_minimum_required(VERSION 3.0.0 FATAL_ERROR)\n\nproject(NNet-assistant CXX)\nSET (CMAKE_BUILD_TYPE \"Release\")\nfind_package(CxxTest)\n\nset(CMAKE_CXX_STANDARD 14)\nset(CMAKE_CXX_STANDARD_REQUIRED ON)\nset(CTEST_OUTPUT_ON_FAILURE ON)\n\n\nset(BUILD_PACH \"build/\")\n\nset(TEST_INC AutoUnitTests.cpp)\n\nset(TEST_EXEC AutoUnitTests)\nset(PROG_EXEC main.out)\n\nset(PROJ_OBJ proj_obj.o)\n\nset(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${BUILD_PACH})\n\nfile(GLOB TEST_SRC \"test/*.h\")\nfile(GLOB PROG_SRC \"src/*.cpp\")l\n\nif(CXXTEST_FOUND)\n    include_directories(${CXXTEST_INCLUDE_DIR})\n    enable_testing()\n\n    CXXTEST_ADD_TEST(${TEST_EXEC} ${TEST_INC} ${TEST_SRC})\n    add_library(${PROJ_OBJ} SHARED ${PROG_SRC})\n\n    target_link_libraries(${TEST_EXEC} ${PROJ_OBJ}) # as needed\n\n    add_custom_target(test_output ${CMAKE_COMMAND} -E env CTEST_OUTPUT_ON_FAILURE=1\n                  ${CMAKE_CTEST_COMMAND} -C $<CONFIG> --verbose\n                  ${TEST_EXEC} ${PROJ_OBJ} ${CMAKE_BINARY_DIR})\n\nendif()\n\nadd_executable(${PROG_EXEC} ${PROG_SRC})\n",
 			"file": "CMakeLists.txt",
+			"file_size": 1010,
+			"file_write_time": 131840687830050267,
 			"settings":
 			{
-				"buffer_size": 1004,
+<<<<<<< HEAD
+				"buffer_size": 1011,
+=======
+				"buffer_size": 1012,
+>>>>>>> 350582f62a96f19daaf187f236bb69e6c37426da
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
+		},
+		{
+<<<<<<< HEAD
+			"file": ".gitignore",
+			"settings":
+			{
+				"buffer_size": 314,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "test/neuron_test.h",
+			"settings":
+			{
+				"buffer_size": 255,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "startProject.sh",
+			"settings":
+			{
+				"buffer_size": 56,
+				"encoding": "UTF-8",
+				"line_ending": "Unix",
+				"name": "#!/bin/sh"
+			}
+=======
+			"contents": "# Prerequisites\n*.d\n\n# Compiled Object files\n*.slo\n*.lo\n*.o\n*.obj\n\n# Precompiled Headers\n*.gch\n*.pch\n\n# Compiled Dynamic libraries\n*.so\n*.dylib\n*.dll\n\n# Fortran module files\n*.mod\n*.smod\n\n# Compiled Static libraries\n*.lai\n*.la\n*.a\n*.lib\n\n# Executables\n*.exe\n*.out\n*.app\n\n# Other\nCMakeFiles/*\n*.cmake\n",
+			"file": ".gitignore",
+			"file_size": 305,
+			"file_write_time": 131840163482449694,
+			"settings":
+			{
+				"buffer_size": 300,
+				"line_ending": "Unix"
+			}
+>>>>>>> 350582f62a96f19daaf187f236bb69e6c37426da
 		}
 	],
-	"build_system": "NNet-assistant - rebuild_cache",
+	"build_system": "NNet-assistant - test",
 	"build_system_choices":
 	[
 		[
@@ -656,7 +703,71 @@
 				]
 			],
 			[
-				"NNet-assistant - rebuild_cache",
+				"NNet-assistant - AutoUnitTests",
+				""
+			]
+		],
+		[
+			[
+				[
+					"NNet-assistant - AutoUnitTests.out",
+					""
+				],
+				[
+					"NNet-assistant - AutoUnitTests.out/fast",
+					""
+				],
+				[
+					"NNet-assistant - all",
+					""
+				],
+				[
+					"NNet-assistant - clean",
+					""
+				],
+				[
+					"NNet-assistant - edit_cache",
+					""
+				],
+				[
+					"NNet-assistant - main.out",
+					""
+				],
+				[
+					"NNet-assistant - main.out/fast",
+					""
+				],
+				[
+					"NNet-assistant - proj_obj",
+					""
+				],
+				[
+					"NNet-assistant - proj_obj/fast",
+					""
+				],
+				[
+					"NNet-assistant - rebuild_cache",
+					""
+				],
+				[
+					"NNet-assistant - test",
+					""
+				],
+				[
+					"NNet-assistant - test_output",
+					""
+				],
+				[
+					"Packages/Makefile/Make.sublime-build",
+					""
+				],
+				[
+					"Packages/Makefile/Make.sublime-build",
+					"Clean"
+				]
+			],
+			[
+				"NNet-assistant - test",
 				""
 			]
 		]
@@ -757,9 +868,10 @@
 	},
 	"console":
 	{
-		"height": 0.0,
+		"height": 136.0,
 		"history":
 		[
+			"import urllib.request,os,hashlib; h = '6f4c264a24d933ce70df5dedcf1dcaee' + 'ebe013ee18cced0ef93d5f746d80ef60'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by) "
 		]
 	},
 	"distraction_free":
@@ -773,7 +885,8 @@
 	},
 	"expanded_folders":
 	[
-		"/home/dmitry-us/Project/NNet-assistant"
+		"/home/xb5/Project/NNet-assistant",
+		"/home/xb5/Project/NNet-assistant/test"
 	],
 	"file_history":
 	[
@@ -939,7 +1052,11 @@
 	"groups":
 	[
 		{
+<<<<<<< HEAD
 			"selected": 2,
+=======
+			"selected": 1,
+>>>>>>> 350582f62a96f19daaf187f236bb69e6c37426da
 			"sheets":
 			[
 				{
@@ -948,15 +1065,24 @@
 					"semi_transient": false,
 					"settings":
 					{
+<<<<<<< HEAD
 						"buffer_size": 1011,
+=======
+						"buffer_size": 1012,
+>>>>>>> 350582f62a96f19daaf187f236bb69e6c37426da
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
+<<<<<<< HEAD
 								230,
 								230
+=======
+								229,
+								229
+>>>>>>> 350582f62a96f19daaf187f236bb69e6c37426da
 							]
 						],
 						"settings":
@@ -970,10 +1096,17 @@
 							"syntax": "Packages/CMake/CMake.sublime-syntax"
 						},
 						"translation.x": 0.0,
+<<<<<<< HEAD
 						"translation.y": 90.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 3,
+=======
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+>>>>>>> 350582f62a96f19daaf187f236bb69e6c37426da
 					"type": "text"
 				},
 				{
@@ -982,6 +1115,7 @@
 					"semi_transient": false,
 					"settings":
 					{
+<<<<<<< HEAD
 						"buffer_size": 314,
 						"regions":
 						{
@@ -1011,23 +1145,38 @@
 					"settings":
 					{
 						"buffer_size": 255,
+=======
+						"buffer_size": 300,
+>>>>>>> 350582f62a96f19daaf187f236bb69e6c37426da
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
+<<<<<<< HEAD
 								192,
 								192
+=======
+								176,
+								179
+>>>>>>> 350582f62a96f19daaf187f236bb69e6c37426da
 							]
 						],
 						"settings":
 						{
+<<<<<<< HEAD
 							"syntax": "Packages/C++/C++.sublime-syntax",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 1.0,
+=======
+							"syntax": "Packages/zzz A File Icon zzz/aliases/Shell Script (Git).sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 9.0,
+>>>>>>> 350582f62a96f19daaf187f236bb69e6c37426da
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
